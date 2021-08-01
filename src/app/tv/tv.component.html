@@ -1,0 +1,32 @@
+<section>
+
+    <div class="layer-2">
+
+<div class=" container">
+
+    <div class="row py-5">
+
+        <div *ngFor='let tv of tvList' class=" col-md-3">
+
+            <div class=" tv-content py-5 text-center position-relative">
+
+                <img [src]="imgPrefix+tv.poster_path" alt="tv.title" class=" w-100 py-3 ">
+
+                <div class=" layer position-absolute d-flex justify-content-start align-items-start py-3">
+                    <h4 class=" bg-info rounded">{{tv.vote_average}}</h4>
+                 </div>
+               <h4>{{tv.title}}</h4>
+               <h3>Vote : {{tv.vote_count}}</h3>
+               <h5>popularity : {{tv.popularity}}</h5>
+               <h6>Media Type : Movie</h6>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+</section>

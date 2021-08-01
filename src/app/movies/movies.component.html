@@ -1,0 +1,33 @@
+<section>
+
+    <div class="layer-2">
+
+<div class=" container">
+
+    <div class="row py-5">
+
+        <div *ngFor='let movie of moviesList' class=" col-md-3">
+
+            <div class=" movie-content py-5 text-center position-relative">
+
+                <img [src]="imgPrefix+movie.poster_path" alt="movie.title" class=" w-100 py-3 rounded-pill">
+
+                <div class=" layer position-absolute d-flex justify-content-start align-items-start py-3">
+                    <h4 class=" bg-info rounded">{{movie.vote_average}}</h4>
+                 </div>
+
+               <h4>{{movie.title}}</h4>
+               <h3>Vote : {{movie.vote_count}}</h3>
+               <h5>popularity : {{movie.popularity}}</h5>
+               
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+</section>

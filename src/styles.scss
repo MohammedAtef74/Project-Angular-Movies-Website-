@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransparent:rgba(36,186,239,.6) ;
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$borderHeight:1px;
+$secondFontColor:#949cb0;
+
+
+body
+{
+    background-color: $bgColor;
+    background-image: url(../src/assets/images/LprfHb.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: $fontColor;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+    font-size: 18px;
+    color: $fontColor;
+}
+
+a:hover
+{
+    
+    text-decoration: none;
+    font-size: 18px;
+    color: $fontColor;
+}
+
+i
+{
+    cursor: pointer;
+}
+
+.brdr
+{
+    height: 3px;
+    background-color: rgba(255, 0, 0, 0.397);
+}
+.second-color
+{
+  color:rgb(238, 255, 0); 
+}
+.vote
+{
+    background-color: $lightBgColor;
+    position: absolute;
+    padding: 5px;
+    top: 0;
+    height: 40px;
+    color:$fontColor;
+}
+
+nav
+{
+    background-color: black;
+}
+img
+{
+    cursor: pointer;
+}
+
+img:hover
+{
+    transition-duration: 0.8s;
+    transform: scale(1.3,1.3);
+}

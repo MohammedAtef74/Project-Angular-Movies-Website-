@@ -1,0 +1,102 @@
+<app-homeheader [trendingMovies]='trendingMovies'></app-homeheader>
+
+<div class=" container ">
+
+    <div class=" row py-5"> 
+
+      <div class=" col-md-4 d-flex align-items-center">
+
+        <div>
+            <div class=" brdr w-25 mb-4"></div>
+            <h2>Trending Movies To Watch <br> Right Now</h2>
+            <p class="second-color my-2">Most Watched Movies By Days</p>
+            <div class=" brdr w-75 mt-4 "></div>
+        </div>
+     
+
+      </div>
+
+        <div *ngFor='let movie of trendingMovies' class=" col-md-2">
+            <div class="movie my-2 position-relative content">
+
+                <a [routerLink]='["/moviedetails" , movie.id]' >
+                    <img class=" w-100" [src]="imgPrefix+movie.poster_path" [alt]="movie.title">
+               
+
+                    <div class="layer d-flex justify-content-center align-items-center  position-absolute">
+                        <h3 class=" my-2 h6 text-center">{{movie.title}}</h3>
+    
+                        <div class="vote">
+                            {{movie.vote_average}}
+                        </div>
+                    </div>
+
+                </a>
+           
+            </div>
+        
+
+        </div>
+         
+    </div>
+
+    <div class=" row py-5"> 
+
+        <div class=" col-md-4 d-flex align-items-center">
+  
+          <div>
+              <div class=" brdr w-25 mb-4"></div>
+              <h2>Trending Tv To Watch <br> Right Now</h2>
+              <p class="second-color my-2">Most Watched Tv By Days</p>
+              <div class=" brdr w-75 mt-4"></div>
+          </div>
+       
+  
+        </div>
+  
+          <div *ngFor='let tv of trendingTv' class=" col-md-2">
+              <div class="movie my-2 position-relative">
+                  <img class=" w-100 my-2" [src]="imgPrefix+tv.poster_path" [alt]="tv.name">
+                  <h3 class=" my-2 h6 text-center">{{tv.name}}</h3>
+
+                  <div class="vote">
+                      {{tv.vote_average}}
+                  </div>
+              </div>
+          
+  
+          </div>
+           
+      </div>
+
+      <div class=" row py-5"> 
+
+        <div class=" col-md-4 d-flex align-items-center">
+  
+          <div>
+              <div class=" brdr w-25 mb-4"></div>
+              <h2>Trending People To Watch <br> Right Now</h2>
+              <p class="second-color my-2">Most Watched People By Days</p>
+              <div class=" brdr w-75 mt-4"></div>
+          </div>
+       
+  
+        </div>
+  
+          <div *ngFor='let person of trendingPeople' class=" col-md-2">
+              <div class="movie my-2 position-relative">
+                  <img class=" w-100" [src]="imgPrefix+person.backdrop_path" [alt]="person.name">
+                  <h3 class=" my-2 h6 text-center">{{person.name}}</h3>
+                  <h3 class=" my-2 h6 text-center">{{person.original_title}}</h3>
+
+
+  
+              </div>
+          
+  
+          </div>
+           
+      </div>
+  
+
+</div>
